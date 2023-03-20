@@ -1,0 +1,418 @@
+body {
+  background-color: #A8CFBD   ;
+  font-family: Sans-Serif, Monospace;
+  font-weight: 700;
+  margin: 0;
+  padding-top: 50px;
+}
+
+/* The side navigation menu */
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  right: 0; /* Position on the right side */
+  background-color: #111; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  z-index: 1000;
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.loremsidenav {
+  z-index: 1002;
+  color: #be5c1a;
+  padding: 8px 8px 8px 32px;
+  font-size: 40px;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-right .5s; /* Change from margin-left to margin-right */
+  padding: 20px;
+  padding-left: 0; /* Remove left padding */
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+.top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #f5db1b;
+  color: #be5c1a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10px;
+  z-index: 999;
+}
+
+.left-content {
+  margin-right: auto;
+  font-size: 40px;
+  padding-left: 30px;
+}
+
+.right-content {
+  margin-left: auto;
+  padding-right: 40px;
+}
+
+.hamburger-menu {
+  font-size: 37px;
+  border: none;
+  background-color: transparent;
+  color: #be5c1a;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+}
+
+.hamburger-menu:hover {
+  color: #1B3D2F;
+}
+
+.little-r {
+  font-size: 18px;
+  vertical-align: top;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.square {
+  width: 500px;
+  height: 500px;
+  border-radius: 10px;
+  margin: 25px;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+  background-color: #C8A48C;
+}
+
+.square-text {
+	align-self: flex-start;
+	position: absolute;
+	bottom: 20px;
+	left: 20px;
+	color: #fff;
+}
+
+.squareintro {
+    width: 600px;
+    height: 600px;
+    border-radius: 10px;
+    margin: 25px;
+    text-align: center;
+    padding: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+    background-color: #C8A48C;
+  }
+
+  .squareaction {
+    width: 400px;
+    height: 600px;
+    border-radius: 10px;
+    margin: 25px;
+    text-align: center;
+    padding: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+    background-color: #f5db1b;
+  }
+
+  .squareaction .line {
+    position: absolute;
+    bottom: 60px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #000;
+  }
+  
+  .squareaction .menu-item {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .menu-item {
+    position: relative;
+    display: inline-block;
+    margin: 0 20px;
+  }
+  
+  .menu-item a {
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    color: #000;
+    padding: 10px;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .menu-item a:hover {
+    color: #fff;
+  }
+  
+  .menu-item a:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -20px;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent #000;
+    z-index: 0;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .menu-item a:hover:before {
+    left: 30px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent #fff;
+  }
+
+.Loremdesign {
+  text-align: left;
+  font-size: 47px;
+  padding-bottom: 250px;
+  color: #1B3D2F;
+}
+
+.stikingwebsites {
+  color:#ffffff;
+  text-align: right;
+  font-size: 30px;
+}
+
+.your {
+  color: #f5db1b;
+  font-style: italic;
+}
+
+.actionheader {
+  padding-left: 20px;
+  padding-bottom: -1000px;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.actiontext {
+  padding-bottom: 200px;
+  padding-left: 30px;
+  font-size: 25px;
+}
+
+.mailto {
+  color: #1B3D2F;
+}
+
+.mailto:hover {
+  color: #be5c1a;
+}
+
+.secondrow {
+  width: 500px;
+  height: 500px;
+  border-radius: 10px;
+  margin: 25px;
+  padding: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+.secondrow:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.latest {
+  font-size: 50px;
+  margin-top: 0px;
+  transform: translateY(60px);
+  position: relative;
+  display: inline-block;
+  transition: margin-left 0.2s ease-in-out;
+}
+
+.latest::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0; /* Change top position to align with text */
+  transform: translateY(60%) rotate(45deg); /* Simplify transform */
+  width: 20px;
+  height: 20px;
+  border-top: 4px solid white;
+  border-right: 4px solid white;
+  transition: all 0.4s ease-in-out;
+  opacity: 0;
+}
+
+.latest:hover::before {
+  left: -2px;
+  opacity: 1;
+}
+
+.latest:hover {
+  padding-left: 32px;
+  margin-left: 20px; /* Adjust margin on hover */
+}
+
+.arrow-container {
+  position: relative;
+}
+
+.havealook {
+  transform: translateY(70px);
+  text-align: left;
+  font-size: 23px;
+}
+
+.bigsquare {
+  width: 1200px;
+  height: 500px;
+  border-radius: 10px;
+  margin: 25px;
+  text-align: center;
+  padding: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+  background-color: #C8A48C;
+}
+
+.bigsquare:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.textunderbigimage {
+  border-radius: 10px;
+  margin: 25px;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
+  transform: translateY(-40px);
+  position: relative;
+  display: inline-block;
+  transition: margin-left 0.7s ease-in-out;
+}
+
+
+.textunderbigimage::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0; /* Change top position to align with text */
+  transform: translateY(60%) rotate(45deg); /* Simplify transform */
+  width: 20px;
+  height: 20px;
+  border-top: 4px solid white;
+  border-right: 4px solid white;
+  transition: all 0.7s ease-in-out;
+  opacity: 0;
+}
+
+.textunderbigimage:hover::before {
+  left: -2px;
+  opacity: 1;
+}
+
+.textunderbigimage:hover {
+  padding-left: 32px;
+  margin-left: 3  0px; /* Adjust margin on hover */
+  cursor: pointer;
+}
+
+.arrow-container {
+  position: relative;
+}
+
